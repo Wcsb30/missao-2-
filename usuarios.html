@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Usuários de Teste via REST</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-warning">
+  <h1>Usuários de Teste via REST</h1>
+  <div id="usuarios" class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 mb-3" v-for="(user, index) in users" :key="index">
+        <div class="card p-2 m-3">
+          <img :src="user.avatar" class="card-img-top" alt="Avatar do Usuário">
+          <div class="card-body">
+            <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+            <p class="card-text">{{ user.email }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="usuarios.js"></script>
+</body>
+</html>
